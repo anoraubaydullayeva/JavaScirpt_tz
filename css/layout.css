@@ -1,0 +1,24 @@
+.container {
+    padding: 0 7.625rem;
+    margin: 0 auto;
+    max-width: 70.25rem;
+    box-sizing: border-box;
+}
+
+.link-white {
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.2s;
+    border-bottom: 0.0625rem solid transparent;
+}
+
+.link-white:hover {
+    color: #a3cc40;
+    border-color: #a3cc40;
+}
+
+.link-white_big {
+    text-transform: uppercase;
+    text-decoration: none;
+}
