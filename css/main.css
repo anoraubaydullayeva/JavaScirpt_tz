@@ -79,6 +79,11 @@ body {
     display: flex;
 }
 
+.burger,
+.menu__close {
+    display: none;
+}
+
 .blok__main {
     text-align: center;
 }
@@ -277,31 +282,26 @@ body {
     font-size: 11rem;
 }
 
-.content-text {
-    margin-left: 0rem;
+.content__text {
     Font-size: 0.6875rem;
     Line-height: 0.875rem;
     text-align: center;
+    width: 245px;
+    height: 83px;
 }
 
 .party {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 1.2rem;
 }
 
-.party2 {
-    display: flex;
-}
-
 .convenience {
-    margin-right: 3.7rem;
     margin-top: 7rem;
-    width: 24rem;
     text-align: center;
 }
 
 .convenience__two {
-    margin-right: 3.50rem;
     margin-top: 7rem;
     width: 24rem;
     text-align: center;
@@ -321,6 +321,7 @@ body {
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 1rem;
+    margin-left: 2rem;
 }
 
 .why_card_text {
@@ -343,6 +344,10 @@ table td {
     font-family: 'IBM-Plex-Sans';
     font-weight: 400;
     font-size: 0.90rem;
+}
+
+.film__table-wraper {
+    overflow-y: auto;
 }
 
 .table {
@@ -400,8 +405,7 @@ table td {
 }
 
 .ckeck__mark {
-    width: 0.75rem;
-    height: 0.75rem;
+    padding: 0 0 0 2rem;
 }
 
 .table__row svg {
@@ -620,7 +624,9 @@ table td {
 }
 
 .film__cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .cinema__title {
@@ -640,68 +646,107 @@ table td {
 }
 
 /* Фильмы end */
-/* goods */
+/* Товары */
 .goods {
-    margin-bottom: 1.875rem;
-}
-
-.goods__content {
-    margin-top: 5.5rem;
-}
-
-.goods__heading {
-    color: #A3CC40;
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 2.25rem;
+    margin: 2.375rem auto 0;
+    float: none;
 }
 
 .goods__text {
-    margin-bottom: 2.75rem;
+    margin: 2.375rem auto 2.375rem;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
 }
 
 .card__box {
     display: flex;
     justify-content: space-evenly;
-    margin-left: 8.87rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
 }
 
 .card {
-    Width: 15.8125rem;
-    Height: 21.6875rem;
     position: relative;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-right: 12.5rem;
-}
-
-.card_two {
-    Width: 15.3125rem;
-    Height: 21.6875rem;
-    position: relative;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-right: 12.5rem;
-}
-
-.card_three {
-    Width: 15.3125rem;
-    Height: 21.6875rem;
-    position: relative;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-right: 12.5rem;
+    float: left;
+    width: 15.3125rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
 }
 
 .card__img {
-    Width: 18.4375rem;
-    Height: 20.6875rem;
+    display: block;
+    height: 20.6875rem;
 }
 
-/* goods end */
+.card__hover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+}
+
+.card__hover-bacground {
+    background: rgba(163, 204, 64, 0.8);
+    position: absolute;
+    bottom: -5.625rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 200ms;
+}
+
+.card__hover-text {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+    padding: 4.375rem 1.375rem 0;
+    position: relative;
+    margin: auto;
+    flex: 1 0 auto;
+}
+
+@keyframes circle {
+    0% {
+        transform: skew(0, -20deg);
+    }
+
+    50% {
+        transform: skew(0, 0);
+    }
+
+    100% {
+        transform: skew(0, 20deg);
+    }
+}
+
+.card:hover .card__hover-bacground {
+    animation-play-state: paused;
+}
+
+.strong {
+    color: #a3cc40;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+}
+
+.text__p {
+    font-weight: 500;
+    font-size: 0.69rem;
+    line-height: 14px;
+    color: #333333;
+}
+
+/* Товары  end*/
 /* Отзывы */
 .reviews {
     margin-top: 11.50rem;
@@ -879,7 +924,7 @@ table td {
     justify-content: center;
 }
 
-.img_back {
+.img__back {
     background: url(../image/kino.png)no-repeat center/cover;
     width: 25.875rem;
     border-radius: 1.25rem 0 0 1.25rem;
@@ -997,8 +1042,9 @@ form {
 }
 
 .wrap {
-    max-width: 18.75rem;
-    margin: 1.875rem;
+    max-width: 21.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 .input {
@@ -1173,38 +1219,37 @@ form {
     text-decoration: none;
 }
 
-.innopolis {
+.innopolis__logo-footer {
     Width: 10.0625rem;
     Height: 2.5625rem;
     position: relative;
-    margin: 0.375rem 0 0.89rem 4.6875rem;
+    margin: 0.375rem 0 0.89rem 0;
 }
 
 .footer__content {
     margin: 4.3rem 0 0 0;
 }
 
-.text2 {
+.footer__text {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.125rem;
-    margin-left: 4.6875rem;
 }
 
 .innopolis__img {
     height: auto;
 }
 
-img {
-    width: 15.3125rem;
-    height: 10.5625rem;
+.feedback__img {
+    width: 100%;
+    height: 100%;
 }
 
-#site {
+#footer__site {
     margin: 4.3rem 5.25rem 0 0;
 }
 
-.site {
+.footer__title {
     margin-bottom: 1.375rem;
     font-weight: 700;
     font-size: 1.25rem;
@@ -1225,16 +1270,9 @@ img {
     list-style: none;
 }
 
-#contact {
+#footer__contact {
     list-style: none;
     margin: 4.3rem 9.30rem 1.375rem 0;
-}
-
-.contact {
-    margin-bottom: 1.375rem;
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.625rem;
 }
 
 .contact__title {
@@ -1249,30 +1287,10 @@ img {
     text-decoration: none;
 }
 
-.page {
-    font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 1.1875rem;
-    margin: 2.4375rem 0 0 4.6875rem;
-}
-
 ul {
     list-style: none;
 }
 
-.what {
-    color: #A3CC40;
-}
-
-.chek {
-    display: flex;
-    margin: 1.75rem;
-}
-
-.chek p {
-    margin-left: 0.375rem;
-    font-size: 0.75rem;
-}
 
 .social {
     margin: 2rem 3.8125rem;
@@ -1320,7 +1338,7 @@ ul {
     font-weight: 400;
     font-size: 0.9375rem;
     line-height: 1.1875rem;
-    margin: 2rem 0 0 4.625rem;
+    margin: 2rem 0 0 0 ;
 }
 
 /* footer end */

@@ -1,39 +1,135 @@
-/* @media screen and (max-width: 768px) {
-    .container{
-        padding: 0 10px;
-
-    }
-    .blok__tel{
-        color: red;
-    }
-} */
-
 @media screen and (min-width: 1600px) {
     html {
         font-size: 20px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .owl-prev {
-        position: absolute;
-        left: 15rem;
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 20px;
     }
 
-    .owl-next {
+    .container {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    .container_header {
+        padding: 0 20px;
+    }
+
+    .party {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .film__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .film__cards-center {
+        display: none;
+    }
+
+    /* burger */
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        background: #fff;
+        padding: 54px 44px;
+        transition: 0.7s;
+    }
+
+    .menu.active {
+        right: 0;
+        transition: 0.7s;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blok__ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .navigation {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .link-white {
+        color: black;
+    }
+
+    .blok__call {
+        color: black;
+    }
+
+    .menu__close {
+        display: block;
+        background: none;
+        border: none;
+    }
+
+    /* burger end */
+    .film__p{
+        bottom: -30%;
+        z-index: 2;
+    }
+    .card__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .card__img {
+        margin-top: 2.5rem;
+    }
+
+    .img__back {
+        background: none;
+        display: none;
+    }
+
+    .feedback__img {
+        width: 0;
+        height: 0;
+    }
+
+    .present__imbem {
+        height: 12.3rem;
+        width: 12.29rem;
         position: absolute;
-        left: 34rem;
+        border-radius: 100%;
+        top: -9rem;
+    }
+
+    .footer__contact{
+     flex-wrap: wrap;   
     }
 }
 
 @media screen and (max-width: 500px) {
-    .owl-prev {
-        position: absolute;
-        left: 15rem;
-    }
-
-    .owl-next {
-        position: absolute;
-        left: 34rem;
+.film__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+    .party2,
+    .party {
+        display: block;
     }
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <script src="./js/jquery-3.6.0.min.js" defer></script>
     <script src="./js/owl.carousel.min.js" defer></script>
     <script src="./js/main.js" defer></script>
@@ -22,17 +22,31 @@
     <body>
         <div class="blok">
             <header class="header">
-                <div class="hfdkusah">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem doloribus, excepturi expedita
-                        architecto harum obcaecati aliquid eaque autem inventore aspernatur nesciunt pariatur nobis
-                        repellendus vero dicta qui non facilis laborum.</p>
-                </div>
-                <div class="  container_header container">
+                <div class="container_header container">
                     <div class="navigation">
                         <a href="http://university.innopolis.ru">
                             <img class="innopolis__logo" src="./image/Logo__Innopolis.png" alt="Logo__Innopolis">
                         </a>
+                        <div class="burger">
+                            <svg width="1rem" height=".8rem" viewbox="0 0 20 16" fill="white"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="14" width="20" height="2" />
+                                <rect y="7" width="20" height="2" />
+                                <rect width="20" height="2" />
+                            </svg>
+                        </div>
                         <div class="menu">
+                            <button class="menu__close">
+                                <svg width="27" height="27" viewbox="0 0 27 27" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.38838 27C1.03272 27 0.677068 26.8647 0.406851 26.5925C-0.135617 26.05 -0.135617 25.1705 0.406851 24.6281L24.6281 0.406851C25.1705 -0.135617 26.05 -0.135617 26.5925 0.406851C27.1349 0.949319 27.1349 1.8288 26.5925 2.3716L2.3716 26.5925C2.09935 26.863 1.7437 27 1.38838 27Z"
+                                        fill="#A3CC40" />
+                                    <path
+                                        d="M25.6113 27C25.2556 27 24.9003 26.8647 24.6298 26.5925L0.406851 2.3716C-0.135617 1.8288 -0.135617 0.949319 0.406851 0.406851C0.94932 -0.135617 1.8288 -0.135617 2.3716 0.406851L26.5925 24.6281C27.1349 25.1705 27.1349 26.05 26.5925 26.5925C26.3202 26.863 25.9649 27 25.6113 27Z"
+                                        fill="#A3CC40" />
+                                </svg>
+                            </button>
                             <div class="menu__list">
                                 <a class="blok__tel link-white" href="tel:+78003551256">+7 (800) 355 12-56</a>
                                 <a href="mailto:kino@innopolis.ru" class="blok__title link-white"> kino@innopolis.ru</a>
@@ -47,7 +61,7 @@
                                 </a>
                                 <div class="block01__lng-wrap">
                                     <a href="#" class="block01__lng link-white">
-                                        <span>RU</span>
+                                        <span class="block01__lng-select">RU</span>
                                         <svg class="block-svg" width="8" height="4" viewbox="0 0 8 4" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -56,8 +70,9 @@
                                         </svg>
                                     </a>
                                     <div class="block01__dropdown">
-                                        <a href="#">EN</a>
-                                        <a href="#">RU</a>
+                                        <button value="EN" type="button">EN</button>
+
+                                        <button value="RU" type="button">RU</button>
                                     </div>
                                 </div>
                             </div>
@@ -82,10 +97,7 @@
                     </h2>
                 </div>
             </header>
-
-
         </div>
-
         <!-- <div class="welcome">
         <h3 class="welcome__title">Добро пожаловать!</h3>
         <p class="welcome__text">
@@ -107,7 +119,7 @@
                             <img class="img" src="./image/1.png" alt="Большие экраны">
                             <div class="menu_bar">
                                 <h3 class="why_card_text">Большие экраны</h3>
-                                <p class="content-text">
+                                <p class="content__text">
                                     Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
@@ -117,7 +129,7 @@
                             <img class="img" src="./image/2.png" alt="Объёмный звук">
                             <div class="menu_bar">
                                 <h3 class="why_card_text">Объёмный звук</h3>
-                                <p class="content-text">
+                                <p class="content__text">
                                     Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
@@ -127,40 +139,37 @@
                             <img class="img" src="./image/3.png" alt="Удобные кресла">
                             <div class="menu_bar">
                                 <h3 class="why_card_text">Удобные кресла</h3>
-                                <p class="content-text">
+                                <p class="content__text">
                                     Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="party2">
-                        <div class="convenience__two">
+                        <div class="convenience">
                             <img class="img" src="./image/4.png" alt="Уютная атмосфера">
                             <div class="menu_bar">
                                 <h3 class="why_card_text">Уютная атмосфера</h3>
-                                <p class="content-text">
+                                <p class="content__text">
                                     Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
                             </div>
                         </div>
-                        <div class="convenience__two">
+                        <div class="convenience">
                             <img class="img" src="./image/5.png" alt="Полное погружение">
                             <div class="menu_bar">
                                 <h3 class="why_card_text">Полное погружение</h3>
-                                <p class="content-text">
+                                <p class="content__text">
                                     Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
                             </div>
                         </div>
-                        <div class="convenience__two">
+                        <div class="convenience">
                             <img class="img" src="./image/6.png" alt="Поцелуи на заднем ряду">
                             <div class="menu_bar">
                                 <h3 class="why_card_text">Поцелуи на заднем ряду</h3>
-                                <p class="content-text">
+                                <p class="content__text">
                                     Lorem ipsum dolor sit amet , consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
@@ -169,45 +178,44 @@
                     </div>
                 </div>
             </section>
-            <section class="film" id="film">
+            <section class="film">
                 <div class="container">
                     <h2 class="section__heading">Выберите фильм</h2>
-                    <table class="table">
-                        <thead>
-                            <tr class="film__choice">
-                                <th class="table__row"></th>
-                                <th class="table__cell-head">
-                                    <div class="table__wrapper"> <a class="table__film" href="#">Начало сеанса </a>
-                                        <svg width="9" height="5" viewbox="0 0 9 5" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="table__wrapper"><a class="table__film" href="#">Название фильма</a>
-                                        <svg width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 4.5L8 0H0L4 4.5Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </th>
-                                <th>
-                                    <a class="table__film" href="#">Жанр</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="film__table">
-                        </tbody>
-                    </table>
-                    <tfoot>
-                        <div class="film__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore <br> magna aliqua. Ut enim ad minim veniam.
-                        </div>
-                    </tfoot>
+                    <div class="film__table-wraper">
+                        <table class="table">
+                            <thead>
+                                <tr class="film__choice">
+                                    <th class="table__row"></th>
+                                    <th class="table__cell-head">
+                                        <div class="table__wrapper"> <a class="table__film" href="#">Начало сеанса </a>
+                                            <svg width="9" height="5" viewbox="0 0 9 5" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" fill="white" />
+                                            </svg>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="table__wrapper"><a class="table__film" href="#">Название фильма</a>
+                                            <svg width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 4.5L8 0H0L4 4.5Z" fill="white" />
+                                            </svg>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <a class="table__film" href="#">Жанр</a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="film__table">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="film__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore <br> magna aliqua. Ut enim ad minim veniam.
+                    </div>
 
                 </div>
-
             </section>
             <section class="present">
                 <div class="container">
@@ -250,7 +258,6 @@
                 <div class="container">
                     <div class="film__box">
                         <h2 class="cinema__heading">Фильмы</h2>
-
                         <p class="section__commit">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod
                             tempor incididunt ut labore
@@ -323,8 +330,6 @@
                                         </div>
                                     </a>
                                 </td>
-                            </tr>
-                            <tr class="film__cards">
                                 <td>
                                     <a href="kinopoisk.ru/film/1162604/" class="film__img" title="кинопоиск / Спутник"
                                         target="_blank">
@@ -345,8 +350,8 @@
                                         </div>
                                     </a>
                                 </td>
-                                <td>
-                                    <a href="https://www.kinopoisk.ru/film/1188248/" class="film__img"
+                                <td class="film__cards-center">
+                                    <!-- <a href="https://www.kinopoisk.ru/film/1188248/" class="film__img"
                                         title="кинопоиск / Калашников" target="_blank">
                                         <img src="./image/005.png" alt="Калашников">
                                         <div class="film__p">
@@ -363,7 +368,7 @@
                                                 etiam non quam. Ut pharetra sit
                                                 amet aliquam id diam maecenas.</p>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </td>
                                 <td>
                                     <a href="https://www.kinopoisk.ru/film/601933/" class="film__img"
@@ -385,8 +390,6 @@
                                         </div>
                                     </a>
                                 </td>
-                            </tr>
-                            <tr class="film__cards">
                                 <td>
                                     <a href="https://www.kinopoisk.ru/film/447301/" class="film__img"
                                         title="кинопоиск / Начало" target="_blank">
@@ -452,45 +455,39 @@
                     </div>
                 </div>
             </section>
-
-            <section class="goods">
+            <section>
                 <div class="container">
-                    <div class="goods__content">
-                        <h2 class="goods__heading">Товары</h2>
-                        <div class="section__text goods__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed
-                            do
-                            eiusmod
-                            tempor
-                            incididunt ut
-                            labore et
-                            dolore <br> magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam
-                            elementum
-                            pulvinar
-                            etiam
-                            non
-                            quam.</div>
-                        <div class="card__box">
-                            <div class="card">
-                                <img src="./image/GOODS1.png" alt="Coca-cola" class="card__img">
-                                <div class="card__hover">
-                                    <!-- <p>Coca-cola</p> -->
-                                </div>
+                    <h2 class="strong goods">Товары</h2>
+                    <div class="text__p goods__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor
+                        incididunt ut
+                        labore et
+                        dolore <br> magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum
+                        pulvinar
+                        etiam
+                        non
+                        quam.</div>
+                    <div class="card__box">
+                        <div class="card">
+                            <img class="card__img" src="./image/goods1.png" alt="Coca-cola">
+                            <div class="card__hover">
+                                <div class="card__hover-bacground"></div>
+                                <p class="card__hover-text">Coca-cola</p>
                             </div>
-                            <div class="card_two">
-                                <img src="./image/GOODS2.png" alt="Железный человек" class="card__img">
-                                <div class="card__hover">
-                                    <!-- <p>Брелок
-                                    “Железный человек”</p> -->
-                                </div>
+                        </div>
+                        <div class="card">
+                            <img class="card__img" src="./image/goods2.png" alt="Брелок Железный человек">
+                            <div class="card__hover">
+                                <div class="card__hover-bacground"></div>
+                                <p class="card__hover-text">Брелок “Железный человек”</p>
                             </div>
-                            <div class="card_three">
-                                <img src="./image/Product 3.png" alt="Постер
-                                    “Мстители" class="card__img">
-                                <div class="card__hover">
-                                    <!-- <p>Постер
-                                    “Мстители”</p> -->
-                                </div>
+                        </div>
+                        <div class="card">
+                            <img class="card__img" src="./image/goods3.png" alt="Постер Мстители">
+                            <div class="card__hover">
+                                <div class="card__hover-bacground"></div>
+                                <p class="card__hover-text">Постеp “Мстители”</p>
                             </div>
                         </div>
                     </div>
@@ -585,21 +582,21 @@
             <section id="feedback">
                 <div class=" feedback__form">
                     <div class="container form__section">
-                        <div class="img_back">
-                            <img src="./image/oq.png" alt="images">
+                        <div class="img__back">
+                            <img class="feedback__img" src="./image/white.png" alt="images">
                         </div>
                         <form action="order.php" class="party_form">
                             <h4 class="tx-form">Обратная связь</h4>
                             <!-- <input class="full_name" type="text" placeholder="Полное имя" required> -->
                             <div class="wrap">
                                 <label class="input input__fille">
-                                    <input class="input__input" type="text">
+                                    <input class="input__input" type="text" required>
                                     <p class="input__label">Полное имя</p>
                                 </label>
                             </div>
                             <!-- <input type="file" required> -->
                             <div class="feedback__select-wraper">
-                                <select class="option_form">
+                                <select required class="option_form">
                                     <option value="Номер места">Номер места </option>
                                     <option value="Номер места">9-18 LUX </option>
                                     <option value="Номер места">18-27 LUX </option>
@@ -639,9 +636,9 @@
                 <div class="footer__contact">
                     <div class="footer__content">
                         <a href="http://university.innopolis.ru">
-                            <img class="innopolis" src="./image/Logo__Innopolis.png" alt="Logo__Innopolis">
+                            <img class="innopolis__logo-footer" src="./image/Logo__Innopolis.png" alt="Logo__Innopolis">
                         </a>
-                        <p class="text2">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod
+                        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod
                             tempor<br>
                             incididunt
                             ut labore et dolore magna <br> aliqua. Ut enim ad minim veniam
@@ -691,33 +688,36 @@
                                 </svg>
                             </a>
                         </div>
-                        <p class="footer__text">
-                            Copyright @ 2020 Innopolis University . All Rights Reserved.
-                        </p>
                     </div>
-                    <ul id="site">
-                        <h3 class="site">SITE</h3>
+                    <ul id="footer__site">
+                        <h3 class="footer__title">SITE</h3>
                         <li class="site__title"><a class="site__link" href="#whyus">EVENT DETAILS</a></li>
                         <li class="site__title"><a class="site__link" href="#select">SPEAKERS</a></li>
                         <li class="site__title"><a class="site__link" href="#film">SPONSORS</a></li>
                         <li class="site__title"><a class="site__link" href="#goods">PAST EVENTS</a></li>
                         <li class="site__title"><a class="site__link" href="#reviews">CONTACT</a></li>
                     </ul>
-                    <div id="contact">
-                        <h3 class="contact">CONTACT</h3>
-                        <li class="contact__title"><a class="contact__link" href="tel:+78003551256">+7 (800) 355
-                                12-56</a>
+                    <div id="footer__contact">
+                        <h3 class="footer__title">CONTACT</h3>
+                        <li class="contact__title"><a class="contact__link" href="tel:+78003551256">+7 (800) 355 12-56</a>
                         </li>
                         <li class="contact__title"><a class="contact__link"
-                                href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
+                                href="mailto:kino@innopolis.ru">kino@innopolis.ru</a>
+                            </li>
                         <li class="contact__title"><a class="contact__link" href="#">420500, г. Иннополис <br>
                                 ул.Университетская, д.1</a></li>
-                        <li class="contact__title"><a class="contact__link" href="#">Как добраться</a></li>
-                        <li class="contact__title"><a class="contact__link" href="#">Все контакты</a></li>
+                        <li class="contact__title"><a class="contact__link" href="#">Как добраться</a>
+                        </li>
+                        <li class="contact__title"><a class="contact__link" href="#">Все контакты</a>
+                        </li>
                     </div>
                 </div>
             </div>
+            <p class="footer__text">
+                Copyright @ 2020 Innopolis University . All Rights Reserved.
+            </p>
         </footer>
     </body>
 </div>
+
 </html>
